@@ -1,4 +1,4 @@
-package data
+package main
 
 import "fmt"
 
@@ -13,10 +13,10 @@ func (d DistanceKm) ToMiles() Distance {
 	return Distance(d / 1.60934)
 }
 
-func Test() {
+func main() {
 	d := Distance(34.5)
 	km := d.ToKm()
 	miles := km.ToMiles()
 
-	fmt.Printf("%v miles is %v km\n", miles, km)
+	fmt.Printf("%v miles is equivalent to %.4v Km\n", miles, km)
 }
